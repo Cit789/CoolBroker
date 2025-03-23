@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "TfNMvbLibM3eLgVGsh+gs3fDwv0mU8qsuGQCpffe1rg=",
+  "Source": "CoolBroker",
+  "BasePath": "_content/CoolBroker",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

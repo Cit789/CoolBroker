@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+
+
+
+service grpcService {
+  
+  rpc CreateQueue (CreateQueueRequest) returns (Response);
+  rpc CreateExchange (CreateExchangeRequest) returns (Response);
+  rpc BindQueue (BindQueueRequest) returns (Response);
+  rpc SendMessage (SendMessageRequest) returns (Response);
+  rpc ReadQueueMessage (ReadQueueMessageRequest) returns (ReadQueueMessageResponse);
+}
+
+
+message CreateQueueRequest{
+	string name = 1;
+}
+
+
+message CreateExchangeRequest{
+	string name = 1;
+	int32 type = 2;
+}
+
+message BindQueueRequest{
+	string exchangeName = 1;
+	string routingKey = 2;
+	string queueName = 3;
+}
+
+message ReadQueueMessageRequest{
+	string queueName = 1;
+}
+
+
+message ReadQueueMessageResponse{
+	bytes message = 1;
+}
+
+
+message SendMessageRequest{
+	bytes message = 1;
+	string routingKey = 2;
+	string exchange = 3;
+}
+
+
+message Response{
+	bool answer = 1;
+}

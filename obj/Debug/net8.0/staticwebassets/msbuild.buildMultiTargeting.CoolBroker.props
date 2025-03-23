@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CoolBroker.props" />
+</Project>
